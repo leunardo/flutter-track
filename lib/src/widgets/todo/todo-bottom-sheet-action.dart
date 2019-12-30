@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:track/src/models/todo.model.dart';
+import 'package:track/src/widgets/todo/todo-add-fab.dart';
 import 'package:track/src/widgets/todo/todo-alert-delete.dart';
 
 class TodoBottomSheetAction extends ListTile {
@@ -19,7 +20,7 @@ class TodoBottomSheetEditAction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TodoBottomSheetAction('Edit', Icons.edit, () {
-
+      showTodoFormModalBottomSheet(context, todo: item);
     });
   }
 

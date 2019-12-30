@@ -12,7 +12,10 @@ class MenuListView extends ListView {
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => item.onTapRoute));
+              MaterialPageRoute(
+                settings: RouteSettings(name: item.routeName),
+                builder: (context) => item.onTapRoute),
+              );
           },
         )
       )

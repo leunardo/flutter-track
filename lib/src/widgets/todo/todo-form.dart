@@ -3,6 +3,10 @@ import 'package:track/src/models/todo.model.dart';
 import 'package:track/src/resources/todo_service.dart';
 
 class TodoForm extends StatefulWidget {
+  final TodoModel todo;
+
+  TodoForm({this.todo});
+
   @override
   State<StatefulWidget> createState() {
     return _TodoFormState();
@@ -18,6 +22,10 @@ class _TodoFormState extends State<TodoForm> {
 
   @override
   Widget build(BuildContext context) {
+    if (widget.todo != null) {
+      _formController.value = TextEditingValue(text: widget.todo.description);
+    }
+
     return Form(
       key: _formKey,
       child: Container(
@@ -55,12 +63,23 @@ class _TodoFormState extends State<TodoForm> {
   }
 
   _save() {
-    _service.saveTodo(TodoModel(
+    var future = widget.todo == null
+      ? _add()
+      : _update();
+
+    future.then((value) => Navigator.popUntil(context, ModalRoute.withName('todo')));
+  }
+
+  _add() {
+    return _service.saveTodo(TodoModel(
       description: _formController.text,
       done: false
-    )).then((value) {
-      Navigator.of(context).pop();
-    });
+    ));
+  }
+
+  _update() {
+    widget.todo.description = _formController.text;
+    return _service.updateTodo(widget.todo);
   }
 
 }

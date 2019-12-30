@@ -14,7 +14,7 @@ showDeleteConfirmation(BuildContext context, TodoModel todo) {
           FlatButton(
             child: Text('Cancel'),
             onPressed: () {
-              Navigator.of(context).pop();
+              Navigator.popUntil(context, ModalRoute.withName('todo'));
             },
           ),
           FlatButton(
@@ -25,8 +25,7 @@ showDeleteConfirmation(BuildContext context, TodoModel todo) {
               TodoService()
                 .deleteTodo(todo)
                 .then((value) {
-                  Navigator.of(context).pop();
-                  Navigator.of(context).pop();
+                  Navigator.popUntil(context, ModalRoute.withName('todo'));
                 });
             },
           )

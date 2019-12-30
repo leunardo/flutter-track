@@ -16,7 +16,8 @@ class TodoService {
     return _collection
       .document(todo.id)
       .updateData({
-        'done': todo.done
+        'done': todo.done,
+        'description': todo.description
       });
   }
 

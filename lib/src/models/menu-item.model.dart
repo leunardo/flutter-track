@@ -5,6 +5,7 @@ class MenuItemModel {
   Icon icon;
   String subtitle;
   Widget onTapRoute;
+  String routeName;
 
-  MenuItemModel({this.title, this.icon, this.subtitle, this.onTapRoute});
+  MenuItemModel({this.title, this.icon, this.subtitle, this.onTapRoute, this.routeName});
 }
