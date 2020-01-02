@@ -9,7 +9,7 @@ class TodoService {
   Stream<List<TodoModel>> streamTodo() {
     return _collection
              .snapshots()
-             .map((snap) =>snap.documents.map((doc) => TodoModel.fromFirestore(doc)).toList())
+             .map((snap) =>snap.documents.map((doc) => TodoModel.fromFirestore(doc)).toList());
   }
 
   Future<void> updateTodo(TodoModel todo) {
