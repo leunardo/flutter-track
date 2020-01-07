@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>635627104879-3mc24fdg0uqnrcivu8jk0gabn9lfrrgm.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.635627104879-3mc24fdg0uqnrcivu8jk0gabn9lfrrgm</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCR2bvm9GQ9SkgpBdXrbwqphCv62hKhZNc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>635627104879</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>dev.leonardoalves.track</string>
+	<key>PROJECT_ID</key>
+	<string>powera1910</string>
+	<key>STORAGE_BUCKET</key>
+	<string>powera1910.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:635627104879:ios:4291a0233473f95d4f7b9a</string>
+	<key>DATABASE_URL</key>
+	<string>https://powera1910.firebaseio.com</string>
+</dict>
+</plist>
